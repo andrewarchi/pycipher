@@ -10,20 +10,20 @@ class TestAutokey(unittest.TestCase):
                      'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz')
         ciphertext = ('gftpesgikmoqsuwyacegikmoqsuwyacegikmoqsuwyacegikmoqs',
                       'cjrkiwyhjlnprtvxzbdfhjlnprtvxzbdfhjlnprtvxzbdfhjlnpr')
-        for i,key in enumerate(keys):
+        for i, key in enumerate(keys):
             enc = Autokey(key).encipher(plaintext[i])
             self.assertEqual(enc.upper(), ciphertext[i].upper())
 
     def test_decipher(self):
         keys = ('GERMAN',
                 'CIPHERS')
-        plaintext= ('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz',
+        plaintext = ('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz',
                      'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz')
         ciphertext = ('gftpesgikmoqsuwyacegikmoqsuwyacegikmoqsuwyacegikmoqs',
-                     'cjrkiwyhjlnprtvxzbdfhjlnprtvxzbdfhjlnprtvxzbdfhjlnpr')
-        for i,key in enumerate(keys):
+                      'cjrkiwyhjlnprtvxzbdfhjlnprtvxzbdfhjlnprtvxzbdfhjlnpr')
+        for i, key in enumerate(keys):
             dec = Autokey(key).decipher(ciphertext[i])
             self.assertEqual(dec.upper(), plaintext[i].upper())
-            	
+
 if __name__ == '__main__':
     unittest.main()

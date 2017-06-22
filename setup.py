@@ -9,7 +9,7 @@ setup(
     author='James Lyons',
     author_email='james.lyons0@gmail.com',
 
-    packages=find_packages(exclude=['tests','tests.*']),
+    packages=find_packages(exclude=['tests', 'tests.*']),
     include_package_data=True,  # declarations in MANIFEST.in
     url='https://github.com/jameslyons/pycipher',
     test_suite='tests',

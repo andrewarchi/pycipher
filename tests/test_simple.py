@@ -15,7 +15,7 @@ class TestSimple(unittest.TestCase):
                       'rtuzesbxjaniypqclghmvwodkfrtuzesbxjaniypqclghmvwodkf',
                       'ymdsvtxizewurqfnbgjlckoahpymdsvtxizewurqfnbgjlckoahp',
                       'lcvmwezojbgdtsrniufyqphxaklcvmwezojbgdtsrniufyqphxak')
-        for i,key in enumerate(keys):
+        for i, key in enumerate(keys):
             enc = SimpleSubstitution(key).encipher(plaintext)
             self.assertEqual(enc.upper(), ciphertext[i].upper())
 
@@ -31,9 +31,9 @@ class TestSimple(unittest.TestCase):
                      'qacphgouwdfknlzebvrsiytmxjqacphgouwdfknlzebvrsiytmxj',
                      'okudalzgeqjshbptvfnwrxcyimokudalzgeqjshbptvfnwrxcyim',
                      'ekptdozqgnlsviuywarbjhfxmcekptdozqgnlsviuywarbjhfxmc')
-        for i,key in enumerate(keys):
+        for i, key in enumerate(keys):
             dec = SimpleSubstitution(key).decipher(ciphertext)
             self.assertEqual(dec.upper(), plaintext[i].upper())
-            	
+
 if __name__ == '__main__':
     unittest.main()

@@ -14,4 +14,3 @@ class TestAtbash(unittest.TestCase):
         enclist = ['zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba']
         enc = Atbash().encipher(text)
         self.assertEqual(enc.upper(), enclist[0].upper())
- 

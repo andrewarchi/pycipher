@@ -10,7 +10,7 @@ class TestBeaufort(unittest.TestCase):
                      'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz')
         ciphertext = ('gdpjwiaxjdqcurdxkwolxreqifrlykczlfsewtfzmyqnztgskhtn',
                       'chneammvagxtffotzqmyyhmsjfrraflcykktyevrddmrxokwwfkq')
-        for i,key in enumerate(keys):
+        for i, key in enumerate(keys):
             enc = Beaufort(key).encipher(plaintext[i])
             self.assertEqual(enc.upper(), ciphertext[i].upper())
 
@@ -18,12 +18,12 @@ class TestBeaufort(unittest.TestCase):
         keys = ('GERMAN',
                 'CIPHERS')
         plaintext= ('abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz',
-                     'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz')
+                    'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz')
         ciphertext = ('gdpjwiaxjdqcurdxkwolxreqifrlykczlfsewtfzmyqnztgskhtn',
-                     'chneammvagxtffotzqmyyhmsjfrraflcykktyevrddmrxokwwfkq')
+                      'chneammvagxtffotzqmyyhmsjfrraflcykktyevrddmrxokwwfkq')
         for i,key in enumerate(keys):
             dec = Beaufort(key).decipher(ciphertext[i])
             self.assertEqual(dec.upper(), plaintext[i].upper())
-            	
+
 if __name__ == '__main__':
     unittest.main()

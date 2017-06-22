@@ -7,10 +7,10 @@ class TestM209(unittest.TestCase):
         text = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         enclist = ['TMHRSVOJLBSOYAGEYCJJCFVPKPJGWQHRJHIEBXWHINKNLGSZLRBN',
                    'CIRLWCGMGBMBCNLEMVGPWTSTPPEVWUZFOBACQBDCFSTVYJEFOTSN']
-        keys = ['AAAAAA','ZSMJDE']                
-        for i,key in enumerate(keys):
+        keys = ['AAAAAA','ZSMJDE']
+        for i, key in enumerate(keys):
             enc = M209(key).encipher(text)
-            self.assertEqual(enc.upper(), enclist[i].upper()) 
-	
+            self.assertEqual(enc.upper(), enclist[i].upper())
+
 if __name__ == '__main__':
     unittest.main()

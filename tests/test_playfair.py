@@ -11,11 +11,11 @@ class TestPlayfair(unittest.TestCase):
                 'xquwfstzgeipboalykdnvrmch',
                 'bxuthifmzrweasdovlpgcqnyk')
         plaintext = ['vzkpitotrgpyxcscwdbzwslxkruqfatetxodnpclkwfbbmxnah',
-                   'xaazowrfqircgvqtgxyfeubpclavqcotwraivrmtpigfvbhkdu',
-                   'hqercnboypafegmbtcrtrbzxqxwinonwbhfxfphnwtamtuzlxu',
-                   'opdofhecblkvdatrvtzqcxqlebomngwevaynhkbiryesxmufkt',
-                   'wukwfxdkrcauclvyzduxoetqmscoswrvbrngulglkfzyxlebpt']
-        for i,key in enumerate(keys):
+                     'xaazowrfqircgvqtgxyfeubpclavqcotwraivrmtpigfvbhkdu',
+                     'hqercnboypafegmbtcrtrbzxqxwinonwbhfxfphnwtamtuzlxu',
+                     'opdofhecblkvdatrvtzqcxqlebomngwevaynhkbiryesxmufkt',
+                     'wukwfxdkrcauclvyzduxoetqmscoswrvbrngulglkfzyxlebpt']
+        for i, key in enumerate(keys):
             dec = Playfair(key).decipher(ciphertext)
             self.assertEqual(dec.upper(), plaintext[i].upper())
 
@@ -26,17 +26,17 @@ class TestPlayfair(unittest.TestCase):
                 'pslqofaiymcnwtuhdxezbkgrv',
                 'xqvlpnakrsewfcyhutdbgziom',
                 'xbhpuvmiyesdnwlakcrgfzotq')
-        plaintext =   'abcdefghiklmnopqrstuvwxyzABCDEFGHIKLMNOPQRSTUVWXY'
+        plaintext = 'abcdefghiklmnopqrstuvwxyzABCDEFGHIKLMNOPQRSTUVWXY'
         ciphertext = ['finrmqtyzsfwiukfkryegoyniqnzkulhvbrqubmslkkvoyulny',
                       'qtskxlhdkdfcuhysgqztfuezavkqkplrwdeoqwhernadtuimze',
                       'fknhhybxagoiussokqucgueidmphxzibxfgsaupsyqqnzoxgie',
                       'sudowcxgvfporgxvsndtqfpeqwdyhceitgrvgsmllakbtqeqep',
                       'kxknvqcumcdechutawqpyspvfkhklmqaingdidthtgwfxespvp']
-        for i,key in enumerate(keys):
+        for i, key in enumerate(keys):
             enc = Playfair(key).encipher(plaintext)
             self.assertEqual(enc.upper(), ciphertext[i].upper())
         # test even length string
-        plaintext ='aaaaaaaaajjjjjkkkkkllllmmmmnnnnffffooooossssoffffffe'
+        plaintext = 'aaaaaaaaajjjjjkkkkkllllmmmmnnnnffffooooossssoffffffe'
         key = 'tpaydcmhfoizwsuvxrbkelqgn'
         ciphertext = 'prprprprtwzvzvvrvrxnplpzzlollkgombocmkmkzbzbcombmbcg'
         enc = Playfair(key).encipher(plaintext)

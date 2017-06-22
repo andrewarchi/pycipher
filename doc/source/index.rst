@@ -8,7 +8,7 @@ Welcome to pycipher's documentation!
 
 .. toctree::
    :maxdepth: 2
-   
+
 Common classical ciphers implemented in Python.
 
 The code is hosted on GitHub: https://github.com/jameslyons/pycipher
@@ -29,7 +29,7 @@ Example usage
 
 .. contents:: Table of Contents
    :depth: 2
-    
+
 A Short Aside on Keysquares
 ----------------------------
 Many of the ciphers mentioned here e.g. :py:meth:`pycipher.Playfair`, :py:meth:`pycipher.Foursquare` use keysquares as part of their key information. A keysquare looks like this::
@@ -52,9 +52,9 @@ Keysquares can also be 6 by 6. In this case the 26 letters A-Z plus the 10 numbe
     x k r 3 c v
     s 5 z w 7 b
     j 9 u t i 8
-    
+
 The keysquare above becomes "ph0qg64mea1yl2nofdxkr3cvs5zw7bj9uti8".
-    
+
 The Ciphers
 ===========
 
@@ -64,14 +64,14 @@ This cipher uses a keysquare as part of its key, see `A Short Aside on Keysquare
 
 .. autoclass:: pycipher.ADFGX
    :members:
-   
+
 ADFGVX Cipher
 -------------
 This cipher uses a keysquare as part of its key, see `A Short Aside on Keysquares`_ for information.
 
 .. autoclass:: pycipher.ADFGVX
    :members:
-   
+
 Affine Cipher
 -------------
 .. autoclass:: pycipher.Affine
@@ -86,7 +86,7 @@ Atbash Cipher
 --------------
 .. autoclass:: pycipher.Atbash
    :members:
-   
+
 Beaufort Cipher
 ---------------
 .. autoclass:: pycipher.Beaufort
@@ -138,14 +138,14 @@ understanding of how the M-209 works before using it.
 
 .. autoclass:: pycipher.M209
    :members:
-   
+
 Playfair Cipher
 -----------------
 This cipher uses a keysquare as part of its key, see `A Short Aside on Keysquares`_ for information.
 
 .. autoclass:: pycipher.Playfair
-   :members:   
-   
+   :members:
+
 Polybius Square Cipher
 ----------------------
 This cipher uses a keysquare as part of its key, see `A Short Aside on Keysquares`_ for information.
@@ -157,7 +157,7 @@ Porta Cipher
 --------------
 .. autoclass:: pycipher.Porta
    :members:
-   
+
 Railfence Cipher
 --------------
 .. autoclass:: pycipher.Railfence
@@ -177,7 +177,7 @@ Vigenere Cipher
 -----------------
 .. autoclass:: pycipher.Vigenere
    :members:
-   
+
 Indices and tables
 ==================
 

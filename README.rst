@@ -2,7 +2,7 @@ pycipher
 ========
 
 Common classical ciphers implemented in Python.
-Documentation is available at http://pycipher.readthedocs.io/en/master/ .
+Documentation is available at http://pycipher.readthedocs.io/en/master/.
 
 Install
 -------

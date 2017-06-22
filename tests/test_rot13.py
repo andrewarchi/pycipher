@@ -14,4 +14,3 @@ class TestRot13(unittest.TestCase):
         enclist = ['nopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklm']
         enc = Rot13().encipher(text)
         self.assertEqual(enc.upper(), enclist[0].upper())
- 

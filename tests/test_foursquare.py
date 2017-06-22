@@ -4,8 +4,8 @@ import unittest
 class TestFoursquare(unittest.TestCase):
 
     def test_encipher(self):
-        keys = (('zgptfoihmuwdrcnykeqaxvsbl','mfnbdcrhsaxyogvituewlqzkp'),
-                ('iebvsurpxanmqoywdlztfkcgh','fobgqehdpwrviknazytmsculx'))
+        keys = (('zgptfoihmuwdrcnykeqaxvsbl', 'mfnbdcrhsaxyogvituewlqzkp'),
+                ('iebvsurpxanmqoywdlztfkcgh', 'fobgqehdpwrviknazytmsculx'))
         plaintext = ('abcdefghiiklmnopqrstuvwxyzabcdefghiiklmnopqrstuvwxyz',
                      'abcdefghiiklmnopqrstuvwxyzabcdefghiiklmnopqrstuvwxyz')
         ciphertext = ('gmtnzahrmsovryngkiquypsqlkgmtnzahrmsovryngkiquypsqlk',
@@ -15,15 +15,15 @@ class TestFoursquare(unittest.TestCase):
             self.assertEqual(enc.upper(), ciphertext[i].upper())
 
     def test_decipher(self):
-        keys = (('zgptfoihmuwdrcnykeqaxvsbl','mfnbdcrhsaxyogvituewlqzkp'),
-                ('iebvsurpxanmqoywdlztfkcgh','fobgqehdpwrviknazytmsculx'))
-        plaintext= ('abcdefghiiklmnopqrstuvwxyzabcdefghiiklmnopqrstuvwxyz',
+        keys = (('zgptfoihmuwdrcnykeqaxvsbl', 'mfnbdcrhsaxyogvituewlqzkp'),
+                ('iebvsurpxanmqoywdlztfkcgh', 'fobgqehdpwrviknazytmsculx'))
+        plaintext = ('abcdefghiiklmnopqrstuvwxyzabcdefghiiklmnopqrstuvwxyz',
                      'abcdefghiiklmnopqrstuvwxyzabcdefghiiklmnopqrstuvwxyz')
         ciphertext = ('gmtnzahrmsovryngkiquypsqlkgmtnzahrmsovryngkiquypsqlk',
                       'efvbiwphxpunqvykdazywxcchlefvbiwphxpunqvykdazywxcchl')
-        for i,key in enumerate(keys):
+        for i, key in enumerate(keys):
             dec = Foursquare(*key).decipher(ciphertext[i])
             self.assertEqual(dec.upper(), plaintext[i].upper())
-            	
+
 if __name__ == '__main__':
     unittest.main()
